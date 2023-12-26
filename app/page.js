@@ -1,13 +1,19 @@
-import Image from 'next/image'
-import Logo from '../public/altcoinvoyagelogo.png'
+"use client"
+import Image from "next/image";
+import Logo from "../public/altcoinvoyagelogo.png";
+import Lottie from "lottie-react";
+import ani from "../public/animation.json"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className='items-center justify-center text-center' >
-        <Image src={ Logo } />
-        <p className='text-blue-200 font-bold' >We are coming to guide you on crypto world.</p>
-     </div>
+    <main className="flex flex-col items-center justify-between">
+      <div className="items-center mt-7 text-center justify-center ">
+        {/* <Lottie className="mt-12"  animationData={ani} loop={true} /> */}
+        <Image src={Logo} />
+        <p className="text-red-300 italic">
+          Your guide on crypto  world
+        </p>
+      </div>
     </main>
-  )
+  );
 }
